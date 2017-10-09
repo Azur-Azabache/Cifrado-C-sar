@@ -1,4 +1,4 @@
-# app.js
+# Cifrado César
 Pseudocódigo:
 
 Salta un prompt:"Ingresa la frase a decodificar" 
