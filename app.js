@@ -1,31 +1,36 @@
 
 var phrase = prompt('Ingresa la frase a decodificar');
+var newarray = [];
 var unicode = [];
+
 function cipher (str){
-
-if (typeof str !== 'string' || str === undefined) { //*Diferencia si hay números o es un campo vacío*
   
-  return "Solo se codifica letras";
-  
-}else{
- 
-  var array = str.split(""); //*Divide el frase ingresada en carácteres
-
-  for (i = 0; i<=array.length; i++); //*Recorre el arreglo*
-  unicode.push("i".charCodeAt(0)); //* Deposita cada número (ASCII en el arreglo unicode)*
-   
-}
-  for (i = 0; i <=unicode.length; i++) { //*Aplica la fórmula para obtener el nuevo número según el parámetro de espacios establecidos = 33*
-    (i - 65 + 33) % 33 + 65
-    return unicode
+   var array = phrase.split("");
+  for (i = 0; i<=array.length -1;i++){
+ unicode.push(phrase.charCodeAt(i)); 
   }
   
-  
-  return;
+  for (i = 0; i <=unicode.length -1; i++) {
+    newarray.push ((unicode[i] - 65 + 33) % 26 + 65);
+    
+  }
+ 
+  return newarray;
 }
 
-function decipher (cipher) //*Esta función cifra el número obtenido a la nueva letra*
+var arr = cipher(phrase);
 
-String.fromCharCode()
-
-cipher(phrase);
+function decipher (array2){
+var arr2 = [];
+for (i = 0; i<= array2.length-1; i++){
+arr2.push(String.fromCharCode(array2[i]));
+return arr2;
+}
+if (isNaN(phrase)===false){
+   "Ingrese una frase por favor";
+}
+else {
+ 
+}
+}
+  decipher(arr);
